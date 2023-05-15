@@ -80,11 +80,13 @@
           border-radius: 20px;
           background-color: transparent;
           font-size: 14px;
+          cursor: pointer;
         }
       }
     }
 
     .right {
+      padding-left: 50px;
       height: 100%;
       img {
         height: 100%;

@@ -19,17 +19,16 @@ function Navbar() {
     };
   }, []);
 
-  // const currentUser = null
 
   const currentUser = {
     id: 1,
-    username: "Anna",
+    username: "Atreus",
     isSeller: true,
   };
 
   return (
     <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
-      <div className="container">
+      <div className="container">  {/* logos and list*/}
         <div className="logo">
           <Link className="link" to="/">
             <span className="text">liverr</span>
@@ -41,8 +40,8 @@ function Navbar() {
           <span>Explore</span>
           <span>English</span>
           {!currentUser?.isSeller && <span>Become a Seller</span>}
-          {currentUser ? (
-            <div className="user" onClick={()=>setOpen(!open)}>
+          {currentUser ? ( // if user is logged in
+            <div className="user" onClick={() => setOpen(!open)}>
               <img
                 src="https://images.pexels.com/photos/1115697/pexels-photo-1115697.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt=""
@@ -70,7 +69,7 @@ function Navbar() {
                 </Link>
               </div>}
             </div>
-          ) : (
+          ) : ( // if user is not logged in
             <>
               <span>Sign in</span>
               <Link className="link" to="/register">
@@ -80,12 +79,12 @@ function Navbar() {
           )}
         </div>
       </div>
-      {(active || pathname !== "/") && (
+      {(active || pathname !== "/") && (  // the mini navbar menu which pops when scrolled down.
         <>
           <hr />
           <div className="menu">
             <Link className="link menuLink" to="/">
-              Graphics & Design
+              Design & Graphics
             </Link>
             <Link className="link menuLink" to="/">
               Video & Animation

@@ -54,7 +54,7 @@ function Home() {
               just project-based pricing.
             </p>
           </div>
-          <div className="item">
+          <div>
             <video src="./img/video.mp4" controls />
           </div>
         </div>
